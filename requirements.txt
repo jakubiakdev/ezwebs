@@ -1,0 +1,4 @@
+pymem
+pywin32
+websockets
+asyncio

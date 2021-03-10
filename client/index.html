@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>EZWEBS PREMIUM CSGO CHEAT</title>
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body onload="onload()">
+        <h1>EZWEBS CSGO Cheat</h1>
+        <div id="Setup">
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" placeholder="localhost">
+            <label for="floatingInput">IP address</label>
+          </div>
+        <button id="SetIpBtn" onclick="console.log('hehe przcisk')" type="button" class="btn btn-primary">Connect</button>
+        </div>
+        <p id=statusText>Status: nothing is happening</p>
+        <div id="cheat">
+            <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-success" onclick="WebsocketHelper('wallhack', 'enable')">Enable wireframe wallhack</button>
+            <button type="button" class="btn btn-danger" onclick="WebsocketHelper('wallhack', 'disable')">Disable wireframe Wallhack</button>
+            </div>
+        </div>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script>
+        function WebsocketHelper(cheat, cheatState){
+            textbox = $("#floatingInput").val();
+            ip = "ws://" + textbox + ":1337"
+            console.log(ip)
+            console.log("Cheat: " + cheat)
+            console.log("CheatState: " + cheatState)
+            var webSocket = new WebSocket(ip);
+            webSocket.onopen = function (event) {
+                
+                console.log("Connected to websocket");
+                $("#cheat").show();
+                $("#Setup").hide();
+                $("#statusText").text("Status: Connected!");
+                if(cheat !=undefined){
+                webSocket.send(cheat + cheatState);
+                }
+            }
+            webSocket.onerror = function (event) {
+                console.log("haha error smieciu nie umiesz programowac XDDD");
+                $("#statusText").text("Status: Error");
+                socket.onclose = function(event) {
+                    if (event.wasClean) {
+                        alert(`[close] Connection closed cleanly, code=${event.code} reason=${event.reason}`);
+                    } else {
+                        // e.g. server process killed or network down
+                        // event.code is usually 1006 in this case
+                        alert('[close] Connection died');
+                    }
+                };
+            }
+        };
+        function onload(){
+            //$("#cheat").hide(); 
+        };
+    </script>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+</html>
