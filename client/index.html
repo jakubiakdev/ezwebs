@@ -18,9 +18,17 @@
         </div>
         <p id=statusText>Status: nothing is happening</p>
         <div id="cheat">
-            <div class="btn-group" role="group" aria-label="Basic example">
+            <div class="btn-group" role="group">
             <button type="button" class="btn btn-success" onclick="WebsocketHelper('wallhack', 'enable')">Enable wireframe wallhack</button>
             <button type="button" class="btn btn-danger" onclick="WebsocketHelper('wallhack', 'disable')">Disable wireframe Wallhack</button>
+            </div>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-success" onclick="WebsocketHelper('radarhack', 'enable')">Enable Radarhack</button>
+                <button type="button" class="btn btn-danger" onclick="WebsocketHelper('radarhack', 'disable')">Disable Radarhack</button>
+            </div>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-success" onclick="WebsocketHelper('moneyhack', 'enable')">Enable Moneyhack</button>
+                <button type="button" class="btn btn-danger" onclick="WebsocketHelper('moneyhack', 'disable')">Disable Moneyhack</button>
             </div>
         </div>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
