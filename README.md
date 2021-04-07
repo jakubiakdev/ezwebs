@@ -13,3 +13,7 @@ pip install -r requirements.txt
 3. Open index.html from client folder
 
 Thanks https://github.com/danielkrupinski/ for code snippets and help on how to set values in memory :)
+
+For anyone saying that it's bad taste:
+
+![For anyone saying that it's bad taste:](https://user-images.githubusercontent.com/63729559/113844838-3466b680-9795-11eb-8142-5b2c74d13a50.png)
